@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/style.css}" />
+        <title>New Post</title>
+    </head>
+
+    <body>
+        <div class="bodyLogin">
+            <h1>Submit a new post</h1>
+
+            <form action="#" method="post" th:action="@{/newPost/{nameOfUser}(nameOfUser = ${nameOfUser})}">
+                <label for="title" class="text1Login">Title:</label>
+                <input type="text" name="title" id="title" class="inputLogin" required/>
+
+                <label for="url" class="text1Login">URL:</label>
+                <input type="text" name="url" id="url" class="inputLogin"/>
+
+                <button type="submit" class="buttonLogin">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

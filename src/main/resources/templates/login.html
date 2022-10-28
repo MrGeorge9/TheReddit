@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/style.css}" />
+        <title>Login</title>
+    </head>
+
+    <body>
+        <div class="bodyLogin">
+            <h1>Welcome to Reddit</h1>
+
+            <form action="#" th:action="@{/login}" method="post">
+                <label for="name" class="text1Login">USERNAME</label>
+                <input type="text" name="name" id="name" placeholder="Name" class="inputLogin" required/>
+
+                <label for="name" class="text1Login">PASSWORD</label>
+                <input type="text" name="password" id="password" placeholder="Password" class="inputLogin" required/>
+
+                <button type="submit" class="buttonLogin">Log in</button>
+                <a class="registerLogin" th:href="@{/register} ">Register a New user</a>
+            </form>
+
+            <p th:if="${error}==0" th:style="'color: red'">Name or password is incorrect</p>
+        </div>
+    </body>
+</html>

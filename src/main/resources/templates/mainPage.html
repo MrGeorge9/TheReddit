@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/style.css}" />
+        <title>Trending Posts</title>
+    </head>
+
+    <body>
+
+        <ul>
+            <li>
+                <a th:href="@{/newPost/{nameOfUser}(nameOfUser = ${nameOfUser})}">Submit new post</a>
+            </li>
+            <li>
+                <a th:href="@{/login}">Switch user</a>
+            </li>
+            <li>
+                <a th:href="@{/mainPage/{nameOfUser}(nameOfUser = ${nameOfUser})}">Trending posts</a>
+            </li>
+        </ul>
+
+        <div class="mainPage">
+            <div th:each = "post: ${posts}" th:object="${post}" class="posts" th:id="*{id}">
+                <img th:src="*{url}" id="imagesMain">
+
+                <div class="postDescription">
+                    <span th:text="'+'+*{rating}" id="rating"></span>
+
+                    <a th:href="@{/raiseRating/{nameOfUser}(nameOfUser = ${nameOfUser})} + @{/{id}(id = *{id})}">
+                        <img src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f44d.png" id="thumbUP">
+                    </a>
+
+                    <a th:href="@{/lowerRating/{nameOfUser}(nameOfUser = ${nameOfUser})} + @{/{id}(id = *{id})}">
+                        <img src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f44d.png" id="thumbDown">
+                    </a>
+
+                    <a th:href="@{*{url}}" th:text="*{title}" id="title"></a>
+
+                    <span th:text="*{date}"></span>
+                </div>
+            </div>
+
+            <a th:href="@{/allPosts/{nameOfUser}(nameOfUser = ${nameOfUser})}" class="loadMore">Load more posts</a>
+        </div>
+    </body>
+</html>

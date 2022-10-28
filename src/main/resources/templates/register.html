@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" th:href="@{/style.css}" />
+        <title>Register</title>
+    </head>
+
+    <body>
+        <div class="bodyRegister">
+            <h1>Register Account</h1>
+
+            <form action="#" th:action="@{/register}" method="post">
+                <input type="text" name="name" placeholder="Name of the user" class="inputRegister" required/>
+
+                <input type="text" name="password" placeholder="Password" class="inputRegister" required/>
+
+                <input type="text" name="passwordAgain" placeholder="PasswordAgain" class="inputRegister" required/>
+
+                <button type="submit" class="buttonRegister">Register</button>
+
+                <p th:if="${error}==0" th:style="'color: red;'">Name is already in use or Passwords don´t match</p>
+            </form>
+        </div>
+    </body>
+</html>

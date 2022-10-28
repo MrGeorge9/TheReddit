@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("background.jpg");
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  padding: 50px 0 30px 0;
+  font-weight: lighter;
+}
+
+.bodyLogin {
+  background-color: aliceblue;
+  width: 400px;
+  margin: 100px auto;
+  padding: 0 150px 40px 150px;
+}
+
+.inputLogin {
+  display: block;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 50px;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.inputLogin:focus {
+  display: block;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 50px;
+  border: 1px solid green;
+}
+
+.text1Login {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.buttonLogin {
+  background-color: grey;
+  display: inline;
+  width: 100px;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 20px;
+  color: white;
+}
+
+.buttonLogin:hover {
+  cursor: pointer;
+  background-color: black;
+  display: inline;
+  width: 100px;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 20px;
+  color: white;
+}
+
+.registerLogin {
+  display: inline;
+  float: right;
+  margin-top: 10px;
+}
+
+.bodyRegister {
+  background-image: url("reddit.png");
+  width: 500px;
+  margin: 100px auto;
+  padding: 0 40px 40px 40px;
+  box-shadow: 1px 3px 5px grey;
+}
+
+.inputRegister {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 0;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.inputRegister:focus {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 0;
+  border-bottom: 2px solid #FF4500;
+}
+
+.buttonRegister {
+  background-color: #FF4500;
+  display: block;
+  width: 100px;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  color: white;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.buttonRegister:hover {
+  cursor: pointer;
+  background-color: black;
+  display: block;
+  width: 100px;
+  border: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  color: white;
+  margin-top: 50px;
+}
+
+.mainPage {
+  width: 1200px;
+  margin: 20px;
+}
+
+#imagesMain {
+  width: 800px;
+  height: 600px;
+  display: block;
+}
+
+.posts {
+  background-color: white;
+  border: 1px solid black;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+#thumbUP {
+  width: 25px;
+  height: 25px;
+}
+
+#thumbDown {
+  width: 25px;
+  height: 25px;
+  transform: scaleY(-1);
+}
+
+.postDescription {
+  margin-top: 10px;
+}
+
+#rating {
+  color: green;
+  font-size: 20px;
+}
+
+span {
+  margin-right: 10px;
+}
+
+#thumbDown {
+  margin-right: 200px;
+}
+
+#title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 0 60px 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+}
+
+
+li a:hover {
+  background-color: #111;
+}
+
+.loadMore {
+  background-color: grey;
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.loadMore:hover {
+  background-color: black;
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: white;
+}
